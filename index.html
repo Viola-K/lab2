@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Notification Popup</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="popup" id="popup">
+   
+    <div class="banner">
+      <!-- Pop-up icon -->
+      <img src="bell.png" class="icon" id="icon" />
+      <!-- Pop-up title -->
+      <span id="title">2 Notifications</span>
+    </div>
+    <!-- Pop-up notifications -->
+    <ul class="notifications" id="notifications">
+      <!-- First pop-up notification item -->
+      <li class="notification" id="notification1">
+        <!-- First pop-up profile icon -->
+        <div class="profile"></div>
+        
+        <div>
+          <div class="name">John Doe</div>
+          <div class="message">followed you</div>
+        </div>
+      </li>
+      <!-- Second pop-up notification item -->
+      <li class="notification" id="notification2">
+        <!-- Second pop-up profile icon -->
+        <div class="profile"></div>
+       
+        <div>
+          <div class="name">Jane Doe</div>
+          <div class="message">followed you</div>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <!-- Pop-up sound -->
+  <audio src="sound.mp3" id="sound"></audio>
+  <!-- JavaScript code -->
+  <script>
+    // Get pop-up elements
+    var popup = document.getElementById("popup");
+    var icon = document.getElementById("icon");
+    var title = document.getElementById("title");
+    var notifications = document.getElementById("notifications");
+    var notification1 = document.getElementById("notification1");
+    var notification2 = document.getElementById("notification2");
+    var sound = document.getElementById("sound");
+
+    // Define the pop-up animation duration
+    var duration = 1000;
+
+    // Define the pop-up animation function
+    function animatePopup() {
+      // Show the pop-up container
+      popup.style.display = "block";
+      // Play the pop-up sound
+      sound.play();
+      // Rotate the pop-up icon
+      icon.style.transform = "rotate(360deg)";
+  
+      title.innerHTML = "2 new notifications";
+    
+      notification1.style.transform = "translateY(40px)";
+      // Slide down the second pop-up notification after a delay
+      setTimeout(function () {
+        notification2.style.transform = "translateY(40px)";
+      }, duration / 2);
+    }
+
+    // Trigger the pop-up animation every 5 seconds (5000 milliseconds)
+    setInterval(animatePopup, 0);
+  </script>
+</body>
+</html>

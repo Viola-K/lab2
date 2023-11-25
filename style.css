@@ -1,0 +1,92 @@
+
+    .popup {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 300px;
+      height: 200px;
+      background: linear-gradient(white), rgb(198, 187, 198);
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      display: none;
+      z-index: 10;
+    }
+
+    /* Styles for the pop-up banner */
+    .banner {
+      height: 60px;
+      background: rgb(128, 33, 33);
+      color: white;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  
+      
+    }
+
+   
+    .icon {
+      width: 40px;
+      height: 40px;
+      margin-right: 10px;
+    }
+
+   
+    .notifications {
+      height: 150px;
+      overflow-y: hidden;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      background: rgb(224, 198, 198);
+     
+    }
+
+    /* Styles for the pop-up notification items */
+    .notification {
+      height: 50px;
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid white;
+      transition: transform 2s;
+    }
+
+    .profile {
+      width: 30px;
+      height: 30px;
+      margin: 5px;
+      border-radius: 50%;
+      background: gray;
+    }
+
+    /* Styles for the pop-up names */
+    .name {
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    /* Styles for the pop-up message */
+    .message {
+      color: #999;
+    }
+
+    /* Styles for the pop-up button */
+    .button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 100px;
+      height: 50px;
+      background: green;
+      color: white;
+      font-weight: bold;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+body{
+  color: black;
+  background-color: azure;
+}
